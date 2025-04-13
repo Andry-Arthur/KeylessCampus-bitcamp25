@@ -1,0 +1,86 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x400daab6: rc522_picc_send at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:89 (discriminator 1)
+--- 0x400dae78: rc522_picc_select at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:345 (discriminator 5)
+--- 0x400834b1: _xt_coproc_exc at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1107
+--- 0x4000c1fd: bzero in ROM
+--- 0x400d8965: vfs_null_open at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:208
+--- 0x400d8a55: vfs_null_read at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:148
+--- 0x40153f83: wpa_request_new_ptk at /home/bjalki/esp/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c:524
+--- 0x4008a265: rtc_clk_cal_internal at /home/bjalki/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x400daab6: rc522_picc_send at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:89 (discriminator 1)
+--- 0x400dae78: rc522_picc_select at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:345 (discriminator 5)
+--- 0x400834b1: _xt_coproc_exc at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1107
+--- 0x400d607b: uart_start_select at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:516
+--- 0x400d6793: uart_ll_write_txfifo at /home/bjalki/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:342 (discriminator 2)
+---  (inlined by) uart_tx_char at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:194 (discriminator 2)
+--- 0x400d7a2e: esp_vfs_register_fs_common at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:421
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000182a: write in ROM
+--- 0x400d70c9: uart_get_stop_bits at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart.c:318 (discriminator 1)
+--- 0x400d7a2e: esp_vfs_register_fs_common at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:421
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000117d: __swrite in ROM
+--- 0x400592fe: __sflush_r in ROM
+--- 0x4005937a: _fflush_r in ROM
+--- 0x40140919: phy_rfcal_data_check_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3825 (discriminator 2)
+--- 0x40147897: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1429 (discriminator 11)
+--- 0x401472ae: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1391 (discriminator 11)
+--- 0x4014099b: get_iq_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3809
+---  (inlined by) phy_rfcal_data_check_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3846
+--- 0x400d899e: vfs_null_open at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:216
+--- 0x400d8a55: vfs_null_read at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:148
+--- 0x40153f83: wpa_request_new_ptk at /home/bjalki/esp/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c:524
+--- 0x4008a265: rtc_clk_cal_internal at /home/bjalki/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is ded0748ddde01b5cd62e90f73ce0a5bbfb8cad004b9f6bdfe9429ca04f9759c1[0m
+[0;33m--- 0x400daab6: rc522_picc_send at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:89 (discriminator 1)
+--- 0x400dae78: rc522_picc_select at /home/bjalki/files/bitcamp/KeylessCampus/scanner/basic/managed_components/abobija__rc522/src/rc522_picc.c:345 (discriminator 5)
+--- 0x400834b1: _xt_coproc_exc at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1107
+--- 0x400d6079: uart_start_select at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:516
+--- 0x400d6793: uart_ll_write_txfifo at /home/bjalki/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:342 (discriminator 2)
+---  (inlined by) uart_tx_char at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:194 (discriminator 2)
+--- 0x400d7a2e: esp_vfs_register_fs_common at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:421
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000182a: write in ROM
+--- 0x400d70c9: uart_get_stop_bits at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart.c:318 (discriminator 1)
+--- 0x400d7a2e: esp_vfs_register_fs_common at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:421
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000117d: __swrite in ROM
+--- 0x400592fe: __sflush_r in ROM
+--- 0x4005937a: _fflush_r in ROM
+--- 0x40140919: phy_rfcal_data_check_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3825 (discriminator 2)
+--- 0x40147897: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1429 (discriminator 11)
+--- 0x401472ae: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1391 (discriminator 11)
+--- 0x4014099b: get_iq_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3809
+---  (inlined by) phy_rfcal_data_check_value at /home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c:3846
+--- 0x400d899e: vfs_null_open at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:216
+--- 0x400d8a55: vfs_null_read at /home/bjalki/esp/esp-idf/components/vfs/nullfs.c:148
+--- 0x40153f83: wpa_request_new_ptk at /home/bjalki/esp/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c:524
+--- 0x4008a265: rtc_clk_cal_internal at /home/bjalki/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:64
+[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: Unknown menu character 'C'[0m
+[0m

@@ -1,0 +1,70 @@
+[1/5] cd /home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/esptool_py && /home/bjalki/.espressif/python_env/idf5.4_py3.13_env/bin/python /home/bjalki/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/bjalki/files/bitcamp/KeylessCampus/build/partition_table/partition-table.bin /home/bjalki/files/bitcamp/KeylessCampus/build/blink_led.bin
+blink_led.bin binary size 0xb7e50 bytes. Smallest app partition is 0x100000 bytes. 0x481b0 bytes (28%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/bjalki/files/bitcamp/KeylessCampus/build/bootloader/esp-idf/esptool_py && /home/bjalki/.espressif/python_env/idf5.4_py3.13_env/bin/python /home/bjalki/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/bjalki/files/bitcamp/KeylessCampus/build/bootloader/bootloader.bin
+Bootloader binary size 0x6580 bytes. 0xa80 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/bjalki/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/bjalki/esp/esp-idf -D "SERIAL_TOOL=/home/bjalki/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/home/bjalki/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/bjalki/files/bitcamp/KeylessCampus/build -P /home/bjalki/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 blink_led.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: bc:dd:c2:cd:aa:44
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000c7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 25984 bytes to 16377...
+Writing at 0x00001000... (100 %)
+Wrote 25984 bytes (16377 compressed) at 0x00001000 in 0.6 seconds (effective 347.1 kbit/s)...
+Hash of data verified.
+Compressed 753232 bytes to 477598...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c5f4... (6 %)
+Writing at 0x00025038... (10 %)
+Writing at 0x0002f2e5... (13 %)
+Writing at 0x00034d38... (16 %)
+Writing at 0x0003ab1f... (20 %)
+Writing at 0x00040467... (23 %)
+Writing at 0x00045e34... (26 %)
+Writing at 0x0004bbae... (30 %)
+Writing at 0x00051684... (33 %)
+Writing at 0x000576d8... (36 %)
+Writing at 0x0005d1d7... (40 %)
+Writing at 0x00063321... (43 %)
+Writing at 0x00068510... (46 %)
+Writing at 0x0006d880... (50 %)
+Writing at 0x000731b9... (53 %)
+Writing at 0x00078801... (56 %)
+Writing at 0x0007daeb... (60 %)
+Writing at 0x000832ed... (63 %)
+Writing at 0x00088fbb... (66 %)
+Writing at 0x0008e790... (70 %)
+Writing at 0x0009461b... (73 %)
+Writing at 0x0009a001... (76 %)
+Writing at 0x0009f8f5... (80 %)
+Writing at 0x000a93e3... (83 %)
+Writing at 0x000aff8d... (86 %)
+Writing at 0x000b600d... (90 %)
+Writing at 0x000bbaae... (93 %)
+Writing at 0x000c1976... (96 %)
+Writing at 0x000c6df1... (100 %)
+Wrote 753232 bytes (477598 compressed) at 0x00010000 in 11.4 seconds (effective 526.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 885.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

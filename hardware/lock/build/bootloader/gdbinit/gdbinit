@@ -1,0 +1,2 @@
+source /home/bjalki/files/bitcamp/KeylessCampus/build/bootloader/gdbinit/symbols
+source /home/bjalki/files/bitcamp/KeylessCampus/build/bootloader/gdbinit/connect

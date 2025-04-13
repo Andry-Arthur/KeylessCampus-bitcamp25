@@ -1,0 +1,30 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x400d6079: uart_ll_get_txfifo_len at /home/bjalki/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:428
+---  (inlined by) uart_tx_char at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:190
+--- 0x400d6793: uart_write at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:243
+--- 0x400d7a2e: esp_vfs_write at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000182a: write in ROM
+--- 0x400d70c9: console_write at /home/bjalki/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+--- 0x400d7a2e: esp_vfs_write at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000117d: __swrite in ROM
+--- 0x400592fe: __sflush_r in ROM
+--- 0x4005937a: _fflush_r in ROM
+--- 0x40140919: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+--- 0x40147897: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+---  (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+--- 0x401472ae: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+--- 0x4014099b: printf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+--- 0x400d89a2: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:231 (discriminator 1)
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

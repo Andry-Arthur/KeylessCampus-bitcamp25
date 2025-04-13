@@ -1,0 +1,116 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x400d6071: uart_tx_char at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:188
+--- 0x400d6775: uart_write at /home/bjalki/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:238
+--- 0x400d7a2e: esp_vfs_write at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000182a: write in ROM
+--- 0x400d70c9: console_write at /home/bjalki/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+--- 0x400d7a2e: esp_vfs_write at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+--- 0x4000bd83: _write_r in ROM
+--- 0x4000117d: __swrite in ROM
+--- 0x400592fe: __sflush_r in ROM
+--- 0x4005937a: _fflush_r in ROM
+--- 0x40140919: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+--- 0x40147897: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+---  (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+--- 0x401472ae: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+--- 0x4014099b: printf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/printf.c:56
+--- 0x400d899e: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:231 (discriminator 1)
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4000bfed: _xtos_set_intlevel in ROM
+--- 0x4008a5fe: vPortClearInterruptMaskFromISR at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+---  (inlined by) vPortExitCritical at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+--- 0x40089cb3: xQueueGenericSend at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1056
+--- 0x400eefed: sys_mutex_unlock at /home/bjalki/esp/esp-idf/components/lwip/port/freertos/sys_arch.c:77
+--- 0x400ef2ea: sys_arch_unprotect at /home/bjalki/esp/esp-idf/components/lwip/port/freertos/sys_arch.c:470
+--- 0x400ef9ad: netconn_recv_data at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:600 (discriminator 1)
+--- 0x400efb09: netconn_recv_data_tcp at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:730
+--- 0x400efb9b: netconn_recv_tcp_pbuf_flags at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/api_lib.c:811
+--- 0x400df300: lwip_recv_tcp at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:990
+--- 0x400df867: lwip_recvfrom at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1257
+--- 0x400df922: lwip_read at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1299
+--- 0x400d7b0e: esp_vfs_read at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 4)
+--- 0x4000bdbb: _read_r in ROM
+--- 0x400017ea: read in ROM
+--- 0x400d8972: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:226
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x400de98b: tryget_socket_unconn_nouse at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:452
+--- 0x400deac6: tryget_socket_unconn at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:470
+--- 0x400def26: tryget_socket at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:505
+--- 0x400def42: get_socket at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:524
+--- 0x400df84f: lwip_recvfrom at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1251
+--- 0x400df922: lwip_read at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1299
+--- 0x400d7b0e: esp_vfs_read at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 4)
+--- 0x4000bdbb: _read_r in ROM
+--- 0x400017ea: read in ROM
+--- 0x400d8972: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:226
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4000c202: bzero in ROM
+--- 0x400d8965: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:225
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4000c1fd: bzero in ROM
+--- 0x400d8965: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:225
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400daab6: task_wdt_timeout_handling at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x400dae78: task_wdt_isr at /home/bjalki/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x400834b1: _xt_lowint1 at /home/bjalki/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4000bfed: _xtos_set_intlevel in ROM
+--- 0x4008a5fe: vPortClearInterruptMaskFromISR at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+---  (inlined by) vPortExitCritical at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+--- 0x4008a0d4: xQueueSemaphoreTake at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1777
+--- 0x400eefc9: sys_mutex_lock at /home/bjalki/esp/esp-idf/components/lwip/port/freertos/sys_arch.c:63
+--- 0x400ef2dc: sys_arch_protect at /home/bjalki/esp/esp-idf/components/lwip/port/freertos/sys_arch.c:457
+--- 0x400dea8d: sock_inc_used at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:381
+--- 0x400deacf: tryget_socket_unconn at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:472
+--- 0x400def26: tryget_socket at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:505
+--- 0x400def42: get_socket at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:524
+--- 0x400df84f: lwip_recvfrom at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1251
+--- 0x400df922: lwip_read at /home/bjalki/esp/esp-idf/components/lwip/lwip/src/api/sockets.c:1299
+--- 0x400d7b0e: esp_vfs_read at /home/bjalki/esp/esp-idf/components/vfs/vfs.c:971 (discriminator 4)
+--- 0x4000bdbb: _read_r in ROM
+--- 0x400017ea: read in ROM
+--- 0x400d8972: connect_tcp_server at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:226
+--- 0x400d8a55: app_main at /home/bjalki/files/bitcamp/KeylessCampus/main/main.c:268
+--- 0x40153f83: main_task at /home/bjalki/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4008a265: vPortTaskWrapper at /home/bjalki/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

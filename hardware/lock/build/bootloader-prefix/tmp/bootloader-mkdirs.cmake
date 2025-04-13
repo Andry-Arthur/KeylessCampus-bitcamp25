@@ -10,18 +10,18 @@ if(NOT EXISTS "/home/bjalki/esp/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "/home/bjalki/esp/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader"
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix"
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/tmp"
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src"
-  "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/tmp"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src"
+  "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /home/bjalki/files/bitcamp/KeylessCampus/build/bootloader/bootloader.elf
+    add-symbol-file /home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /home/bjalki/files/bitcamp/KeylessCampus/build/blink_led.elf
+file /home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/blink_led.elf

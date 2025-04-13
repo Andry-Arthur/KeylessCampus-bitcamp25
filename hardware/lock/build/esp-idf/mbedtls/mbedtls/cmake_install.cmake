@@ -39,16 +39,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
+  include("/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/mbedtls/mbedtls/install_local_manifest.txt"
+  file(WRITE "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/mbedtls/mbedtls/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

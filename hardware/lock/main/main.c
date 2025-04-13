@@ -228,7 +228,11 @@ esp_err_t connect_tcp_server(void)
         putchar(readBuffer[i]);
     }
 
-	    printf("%d\n", strcmp(readBuffer, "ON"));
+	    if(strcmp(readBuffer, "ON") == -79){
+		    close(sock);
+		    break;
+	    }
+
     if (readBuffer[0] == 'O' && readBuffer[1] =='N')
     {
 	    gpio_reset_pin(2);

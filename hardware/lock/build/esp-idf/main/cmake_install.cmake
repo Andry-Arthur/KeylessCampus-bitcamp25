@@ -1,4 +1,4 @@
-# Install script for directory: /home/bjalki/files/bitcamp/KeylessCampus/main
+# Install script for directory: /home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/bjalki/files/bitcamp/KeylessCampus/build/esp-idf/main/install_local_manifest.txt"
+  file(WRITE "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/esp-idf/main/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

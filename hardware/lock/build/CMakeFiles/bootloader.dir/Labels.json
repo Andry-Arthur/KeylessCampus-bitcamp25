@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/CMakeFiles/bootloader"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/bjalki/files/bitcamp/KeylessCampus/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

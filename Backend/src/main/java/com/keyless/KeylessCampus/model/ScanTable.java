@@ -21,4 +21,6 @@ public class ScanTable {
     private DoorSystem doorSystem;
     @CreationTimestamp
     private Timestamp timestamp;
+
+    private Boolean isDenied;
 }

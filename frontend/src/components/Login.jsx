@@ -29,8 +29,23 @@ export default function Login() {
     "Room 303",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    const response = await fetch("http://localhost:8080/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // You're sending JSON
+      },
+      body: JSON.stringify({ username: "Prabesh Bista", password: "solti" }),
+    });
+
+    console.log(response.body);
+    // if (!response.ok) {
+    //   throw new Error(`HTTP error! status: ${response.status}`);
+    // }
+
+  // const responseData = await response.json();
+  // console.log(responseData);
     handleSuccessfulLogin();
 
     // const newErrors = {

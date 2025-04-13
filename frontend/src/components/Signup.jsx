@@ -16,8 +16,16 @@ export default function Signup() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    const response = await fetch("http://localhost:8080/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // You're sending JSON
+      },
+      body: JSON.stringify({ username: "Prabesh Bista", password: "solti", rfid: "123", serialID : "421" }),
+    });
+    console.log(response.body);
     handleSuccessfulSignup();
 
     // Uncomment for validation

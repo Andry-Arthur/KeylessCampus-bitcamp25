@@ -15,10 +15,10 @@ export default function ScanIdPage() {
 
     const response = await fetch("http://157.245.244.233:8080/scanid");
     const data = await response.json();
-    console.log("Response from server:", data);
+    console.log("Response from server:", data["RFID"]);
 
     // Simple validation - check if serialId is not empty
-    // navigate("/login", { state: { serialId: "asdas" } });
+    navigate("/login", { state: { rfID: data["RFID"] } });
   };
 
   return (

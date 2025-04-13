@@ -1,0 +1,490 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 13 2025 03:59:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a3c0h (107456) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002a3e8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002a40c vaddr=3ffb0000 size=03ed0h ( 16080) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002e2e4 vaddr=40080000 size=01d34h (  7476) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=87190h (553360) map[0m
+[0;32mI (334) esp_image: segment 5: paddr=000b71b8 vaddr=40081d34 size=15a8ch ( 88716) load[0m
+[0;32mI (380) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (380) boot: Disabling RNG early entropy source...[0m
+[0;32mI (391) cpu_start: Multicore app[0m
+[0;32mI (399) cpu_start: Pro cpu start user code[0m
+[0;32mI (399) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (399) app_init: Application information:[0m
+[0;32mI (399) app_init: Project name:     blink_led[0m
+[0;32mI (403) app_init: App version:      ef2a73f-dirty[0m
+[0;32mI (408) app_init: Compile time:     Apr 13 2025 04:44:56[0m
+[0;32mI (413) app_init: ELF file SHA256:  f7d426663...[0m
+[0;32mI (417) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (421) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (425) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (429) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (433) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (439) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (444) heap_init: At 3FFB81A8 len 00027E58 (159 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 400977C0 len 00008840 (34 KiB): IRAM[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (469) spi_flash: flash io: dio[0m
+[0;33mW (472) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (485) main_task: Started on CPU0[0m
+[0;32mI (495) main_task: Calling app_main()[0m
+[0;32mI (495) WIFI: Create timer and operator[0m
+[0;32mI (495) WIFI: Connect timer and operator[0m
+[0;32mI (495) WIFI: Create comparator and generator from the operator[0m
+[0;32mI (495) WIFI: Set generator action on timer and compare event[0m
+[0;32mI (505) WIFI: Enable and start timer[0m
+[0;32mI (545) wifi:wifi driver task: 3ffc0310, prio:23, stack:6656, core=0[0m
+[0;32mI (555) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (555) wifi:wifi certification version: v7.0[0m
+[0;32mI (555) wifi:config NVS flash: enabled[0m
+[0;32mI (555) wifi:config nano formatting: disabled[0m
+[0;32mI (565) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (565) wifi:Init management short buffer num: 32[0m
+[0;32mI (575) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (585) wifi:Init static rx buffer num: 10[0m
+[0;32mI (585) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi_init: rx ba win: 6[0m
+[0;32mI (595) wifi_init: accept mbox: 6[0m
+[0;32mI (595) wifi_init: tcpip mbox: 32[0m
+[0;32mI (595) wifi_init: udp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (615) wifi_init: tcp mss: 1440[0m
+[0;32mI (615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (615) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (625) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (705) wifi:mode : sta (bc:dd:c2:cd:aa:44)[0m
+[0;32mI (705) wifi:enable tsf[0m
+[0;32mI (715) WIFI: Oh yeah, we cooking with fire[0m
+
+[0;32mI (715) WIFI: Connecting to wireless access point...[0m
+
+[0;32mI (735) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (735) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (745) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (755) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (795) wifi:connected with ItWouldBeRealCoolIfThisWorks, aid = 1, channel 6, BW20, bssid = 0a:df:a5:ba:2c:bb[0m
+[0;32mI (795) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (795) wifi:pm start, type: 1[0m
+
+[0;32mI (795) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (835) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1865) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1865) WIFI: STA IP: 172.20.10.6[0m
+[0;32mI (1865) WIFI: Connected to ap[0m
+[0;32mI (1875) wifi:<ba-add>idx:0 (ifx:0, 0a:df:a5:ba:2c:bb), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2065) WIFI: Connected to TCP server.[0m
+[1;31mE (7805) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (7805) WIFI: so close to glory[0m
+[1;31mE (9945) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (9945) WIFI: so close to glory[0m
+[0;32mI (12095) WIFI: Connected to TCP server.[0m
+ON
+ON
+[1;31mE (168265) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (168265) WIFI: so close to glory[0m
+[1;31mE (170425) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (170425) WIFI: so close to glory[0m
+[1;31mE (172565) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (172565) WIFI: so close to glory[0m
+[1;31mE (174725) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (174725) WIFI: so close to glory[0m
+[1;31mE (176855) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (176865) WIFI: so close to glory[0m
+[1;31mE (179115) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (179115) WIFI: so close to glory[0m
+[1;31mE (181295) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (181295) WIFI: so close to glory[0m
+[1;31mE (183415) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (183415) WIFI: so close to glory[0m
+[1;31mE (185465) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (185465) WIFI: so close to glory[0m
+[1;31mE (187735) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (187735) WIFI: so close to glory[0m
+[1;31mE (189865) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (189865) WIFI: so close to glory[0m
+[1;31mE (192015) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (192015) WIFI: so close to glory[0m
+[1;31mE (194165) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (194165) WIFI: so close to glory[0m
+[1;31mE (196325) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (196325) WIFI: so close to glory[0m
+[1;31mE (198485) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (198495) WIFI: so close to glory[0m
+[1;31mE (200645) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (200645) WIFI: so close to glory[0m
+[1;31mE (202785) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (202785) WIFI: so close to glory[0m
+[1;31mE (204915) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (204915) WIFI: so close to glory[0m
+[1;31mE (207075) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (207075) WIFI: so close to glory[0m
+[1;31mE (209215) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (209215) WIFI: so close to glory[0m
+[1;31mE (211375) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (211375) WIFI: so close to glory[0m
+[1;31mE (213525) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (213525) WIFI: so close to glory[0m
+[1;31mE (215695) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (215695) WIFI: so close to glory[0m
+[1;31mE (217825) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (217825) WIFI: so close to glory[0m
+[1;31mE (219975) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (219975) WIFI: so close to glory[0m
+[1;31mE (222235) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (222235) WIFI: so close to glory[0m
+[1;31mE (224375) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (224375) WIFI: so close to glory[0m
+[1;31mE (226525) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (226525) WIFI: so close to glory[0m
+[1;31mE (228675) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (228675) WIFI: so close to glory[0m
+[1;31mE (230835) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (230845) WIFI: so close to glory[0m
+[1;31mE (232975) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (232975) WIFI: so close to glory[0m
+[1;31mE (235125) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (235125) WIFI: so close to glory[0m
+[1;31mE (237275) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (237285) WIFI: so close to glory[0m
+[1;31mE (239435) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (239435) WIFI: so close to glory[0m
+[1;31mE (241475) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (241475) WIFI: so close to glory[0m
+[1;31mE (243535) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (243535) WIFI: so close to glory[0m
+[1;31mE (245585) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (245585) WIFI: so close to glory[0m
+[1;31mE (247825) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (247825) WIFI: so close to glory[0m
+[1;31mE (249985) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (249985) WIFI: so close to glory[0m
+[1;31mE (252145) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (252145) WIFI: so close to glory[0m
+[1;31mE (254275) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (254275) WIFI: so close to glory[0m
+[1;31mE (256555) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (256555) WIFI: so close to glory[0m
+[1;31mE (258685) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (258685) WIFI: so close to glory[0m
+[1;31mE (260935) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (260935) WIFI: so close to glory[0m
+[1;31mE (263195) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (263195) WIFI: so close to glory[0m
+[1;31mE (265345) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (265345) WIFI: so close to glory[0m
+[1;31mE (267485) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (267485) WIFI: so close to glory[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 13 2025 03:59:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a3c0h (107456) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002a3e8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002a40c vaddr=3ffb0000 size=03ed0h ( 16080) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002e2e4 vaddr=40080000 size=01d34h (  7476) load[0m
+[0;32mI (140) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=87190h (553360) map[0m
+[0;32mI (334) esp_image: segment 5: paddr=000b71b8 vaddr=40081d34 size=15a8ch ( 88716) load[0m
+[0;32mI (380) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (380) boot: Disabling RNG early entropy source...[0m
+[0;32mI (391) cpu_start: Multicore app[0m
+[0;32mI (399) cpu_start: Pro cpu start user code[0m
+[0;32mI (399) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (399) app_init: Application information:[0m
+[0;32mI (399) app_init: Project name:     blink_led[0m
+[0;32mI (403) app_init: App version:      ef2a73f-dirty[0m
+[0;32mI (408) app_init: Compile time:     Apr 13 2025 04:44:56[0m
+[0;32mI (413) app_init: ELF file SHA256:  f7d426663...[0m
+[0;32mI (417) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (421) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (425) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (429) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (433) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (439) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (444) heap_init: At 3FFB81A8 len 00027E58 (159 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 400977C0 len 00008840 (34 KiB): IRAM[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (469) spi_flash: flash io: dio[0m
+[0;33mW (472) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (485) main_task: Started on CPU0[0m
+[0;32mI (495) main_task: Calling app_main()[0m
+[0;32mI (495) WIFI: Create timer and operator[0m
+[0;32mI (495) WIFI: Connect timer and operator[0m
+[0;32mI (495) WIFI: Create comparator and generator from the operator[0m
+[0;32mI (495) WIFI: Set generator action on timer and compare event[0m
+[0;32mI (505) WIFI: Enable and start timer[0m
+[0;32mI (545) wifi:wifi driver task: 3ffc0310, prio:23, stack:6656, core=0[0m
+[0;32mI (555) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (555) wifi:wifi certification version: v7.0[0m
+[0;32mI (555) wifi:config NVS flash: enabled[0m
+[0;32mI (555) wifi:config nano formatting: disabled[0m
+[0;32mI (565) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (565) wifi:Init management short buffer num: 32[0m
+[0;32mI (575) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (585) wifi:Init static rx buffer num: 10[0m
+[0;32mI (585) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi_init: rx ba win: 6[0m
+[0;32mI (595) wifi_init: accept mbox: 6[0m
+[0;32mI (595) wifi_init: tcpip mbox: 32[0m
+[0;32mI (595) wifi_init: udp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (615) wifi_init: tcp mss: 1440[0m
+[0;32mI (615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (615) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (625) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (715) wifi:mode : sta (bc:dd:c2:cd:aa:44)[0m
+[0;32mI (715) wifi:enable tsf[0m
+[0;32mI (715) WIFI: Oh yeah, we cooking with fire[0m
+
+[0;32mI (715) WIFI: Connecting to wireless access point...[0m
+
+[0;32mI (745) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (745) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (755) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (765) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (845) wifi:connected with ItWouldBeRealCoolIfThisWorks, aid = 1, channel 6, BW20, bssid = 0a:df:a5:ba:2c:bb[0m
+[0;32mI (845) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (855) wifi:pm start, type: 1[0m
+
+[0;32mI (855) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (925) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1895) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1895) WIFI: STA IP: 172.20.10.6[0m
+[0;32mI (1895) WIFI: Connected to ap[0m
+[0;32mI (1905) wifi:<ba-add>idx:0 (ifx:0, 0a:df:a5:ba:2c:bb), tid:0, ssn:3, winSize:64[0m
+[1;31mE (1965) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (1965) WIFI: so close to glory[0m
+[1;31mE (4035) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (4035) WIFI: so close to glory[0m
+[1;31mE (6155) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (6165) WIFI: so close to glory[0m
+[1;31mE (8215) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (8215) WIFI: so close to glory[0m
+[1;31mE (10345) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (10355) WIFI: so close to glory[0m
+[1;31mE (12495) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (12495) WIFI: so close to glory[0m
+[1;31mE (14655) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (14655) WIFI: so close to glory[0m
+[1;31mE (16795) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (16805) WIFI: so close to glory[0m
+[1;31mE (18895) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (18895) WIFI: so close to glory[0m
+[1;31mE (21115) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (21115) WIFI: so close to glory[0m
+[1;31mE (23255) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (23255) WIFI: so close to glory[0m
+[1;31mE (25405) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (25405) WIFI: so close to glory[0m
+[1;31mE (27655) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (27655) WIFI: so close to glory[0m
+[1;31mE (29815) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (29815) WIFI: so close to glory[0m
+[1;31mE (31925) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (31925) WIFI: so close to glory[0m
+[1;31mE (34115) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (34115) WIFI: so close to glory[0m
+[1;31mE (36265) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (36265) WIFI: so close to glory[0m
+[0;32mI (38405) WIFI: Connected to TCP server.[0m
+ON
+[1;31mE (117565) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (117575) WIFI: so close to glory[0m
+[1;31mE (119625) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (119625) WIFI: so close to glory[0m
+[1;31mE (121785) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (121785) WIFI: so close to glory[0m
+[1;31mE (123915) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (123915) WIFI: so close to glory[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 13 2025 03:59:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a3c0h (107456) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002a3e8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002a40c vaddr=3ffb0000 size=03ed0h ( 16080) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002e2e4 vaddr=40080000 size=01d34h (  7476) load[0m
+[0;32mI (140) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=87190h (553360) map[0m
+[0;32mI (334) esp_image: segment 5: paddr=000b71b8 vaddr=40081d34 size=15a8ch ( 88716) load[0m
+[0;32mI (380) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (380) boot: Disabling RNG early entropy source...[0m
+[0;32mI (391) cpu_start: Multicore app[0m
+[0;32mI (399) cpu_start: Pro cpu start user code[0m
+[0;32mI (399) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (399) app_init: Application information:[0m
+[0;32mI (399) app_init: Project name:     blink_led[0m
+[0;32mI (403) app_init: App version:      ef2a73f-dirty[0m
+[0;32mI (408) app_init: Compile time:     Apr 13 2025 04:44:56[0m
+[0;32mI (413) app_init: ELF file SHA256:  f7d426663...[0m
+[0;32mI (417) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (421) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (425) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (429) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (433) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (439) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (444) heap_init: At 3FFB81A8 len 00027E58 (159 KiB): DRAM[0m
+[0;32mI (449) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 400977C0 len 00008840 (34 KiB): IRAM[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (469) spi_flash: flash io: dio[0m
+[0;33mW (472) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (485) main_task: Started on CPU0[0m
+[0;32mI (495) main_task: Calling app_main()[0m
+[0;32mI (495) WIFI: Create timer and operator[0m
+[0;32mI (495) WIFI: Connect timer and operator[0m
+[0;32mI (495) WIFI: Create comparator and generator from the operator[0m
+[0;32mI (495) WIFI: Set generator action on timer and compare event[0m
+[0;32mI (505) WIFI: Enable and start timer[0m
+[0;32mI (545) wifi:wifi driver task: 3ffc0310, prio:23, stack:6656, core=0[0m
+[0;32mI (555) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (555) wifi:wifi certification version: v7.0[0m
+[0;32mI (555) wifi:config NVS flash: enabled[0m
+[0;32mI (555) wifi:config nano formatting: disabled[0m
+[0;32mI (565) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (565) wifi:Init management short buffer num: 32[0m
+[0;32mI (575) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (585) wifi:Init static rx buffer num: 10[0m
+[0;32mI (585) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi_init: rx ba win: 6[0m
+[0;32mI (595) wifi_init: accept mbox: 6[0m
+[0;32mI (595) wifi_init: tcpip mbox: 32[0m
+[0;32mI (595) wifi_init: udp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp mbox: 6[0m
+[0;32mI (605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (615) wifi_init: tcp mss: 1440[0m
+[0;32mI (615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (615) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (625) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (705) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (735) wifi:mode : sta (bc:dd:c2:cd:aa:44)[0m
+[0;32mI (735) wifi:enable tsf[0m
+[0;32mI (735) WIFI: Oh yeah, we cooking with fire[0m
+
+[0;32mI (735) WIFI: Connecting to wireless access point...[0m
+
+[0;32mI (755) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (765) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (775) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (785) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (815) wifi:connected with ItWouldBeRealCoolIfThisWorks, aid = 1, channel 6, BW20, bssid = 0a:df:a5:ba:2c:bb[0m
+[0;32mI (825) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (825) wifi:pm start, type: 1[0m
+
+[0;32mI (825) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (915) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1885) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1885) WIFI: STA IP: 172.20.10.6[0m
+[0;32mI (1885) WIFI: Connected to ap[0m
+[0;32mI (1895) wifi:<ba-add>idx:0 (ifx:0, 0a:df:a5:ba:2c:bb), tid:0, ssn:3, winSize:64[0m
+[1;31mE (2045) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (2045) WIFI: so close to glory[0m
+[1;31mE (4215) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (4215) WIFI: so close to glory[0m
+[1;31mE (6375) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (6375) WIFI: so close to glory[0m
+[1;31mE (8495) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (8495) WIFI: so close to glory[0m
+[1;31mE (10645) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (10645) WIFI: so close to glory[0m
+[1;31mE (12795) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (12795) WIFI: so close to glory[0m
+[1;31mE (15155) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (15155) WIFI: so close to glory[0m
+[1;31mE (17305) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (17305) WIFI: so close to glory[0m
+[1;31mE (19455) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (19455) WIFI: so close to glory[0m
+[1;31mE (21605) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (21605) WIFI: so close to glory[0m
+[1;31mE (23785) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (23785) WIFI: so close to glory[0m
+[1;31mE (25905) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (25905) WIFI: so close to glory[0m
+[1;31mE (28055) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (28055) WIFI: so close to glory[0m
+[1;31mE (30225) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (30225) WIFI: so close to glory[0m

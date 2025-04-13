@@ -12,6 +12,16 @@ export default function Dashboard() {
     end: "",
   });
 
+  const handleRemoveUser = (userId) => {
+    // Update the roomAccessData state by filtering out the removed user
+    setRoomAccessData(prevData => ({
+      ...prevData,
+      users: prevData.users.filter(user => user.id !== userId)
+    }));
+    
+    // In a real app, you would also make an API call to persist this change
+    console.log(`User with ID ${userId} removed from ${roomAccessData.roomNumber}`);
+  };
   // Sample data - in a real app this would come from an API
   useEffect(() => {}, []);
   const [entryLogs, setEntryLogs] = useState([
@@ -129,6 +139,16 @@ export default function Dashboard() {
     },
   ]);
 
+  const [roomAccessData, setRoomAccessData] = useState({
+    roomNumber: "Room 101",
+    users: [
+      { id: 1, userName: "John Smith", rfid: "A7F3B209" },
+      { id: 4, userName: "Jessica Davis", rfid: "D0F6E532" },
+      { id: 16, userName: "Robert Chen", rfid: "J6L2K198" },
+      { id: 17, userName: "Patricia Lee", rfid: "K7M3L209" }
+    ]
+  });
+
   // Filter logs based on search term, filter option, and date range
   const filteredLogs = entryLogs.filter((log) => {
     // Search term filter
@@ -213,17 +233,18 @@ export default function Dashboard() {
           <nav className="dashboard-nav">
             <ul>
               <li
-                className={activeTab === "dashboard" ? "active" : ""}
-                onClick={() => setActiveTab("dashboard")}
-              >
-                Dashboard
-              </li>
-              {/* <li
                 className={activeTab === "history" ? "active" : ""}
                 onClick={() => setActiveTab("history")}
               >
-                Entry History
+                Door History
               </li>
+              <li
+                className={activeTab === "roomAccess" ? "active" : ""}
+                onClick={() => setActiveTab("roomAccess")}
+              >
+                Room Access
+              </li>
+              {/*
               <li
                 className={activeTab === "users" ? "active" : ""}
                 onClick={() => setActiveTab("users")}
@@ -251,13 +272,16 @@ export default function Dashboard() {
         </div>
 
         <div className="dashboard-content">
+        {activeTab === "history" && (
+            <>
           <div className="dashboard-header">
-            <h1>Entry History</h1>
+            <h1>Door History</h1>
             <div className="user-info">
               <span>Admin User</span>
               <div className="user-avatar">AU</div>
             </div>
           </div>
+         
 
           <div className="dashboard-filters">
             <div className="search-container">
@@ -329,6 +353,54 @@ export default function Dashboard() {
               )}
             </div>
           </div>
+          </>)}
+          {activeTab === "roomAccess" && (
+            <>
+              <div className="dashboard-header">
+                <h1>Room Access Management</h1>
+                <div className="user-info">
+                  <span>Admin User</span>
+                  <div className="user-avatar">AU</div>
+                </div>
+              </div>
+
+              <div className="room-access-container">
+                <div className="room-access-section">
+                  <h2>{roomAccessData.roomNumber}</h2>
+                  <div className="room-users-table">
+                    <div className="table-header">
+                      <div className="header-user">User Name</div>
+                      <div className="header-rfid">RFID</div>
+                      <div className="header-actions">Actions</div>
+                    </div>
+                    <div className="table-body">
+                      {roomAccessData.users.length > 0 ? (
+                        roomAccessData.users.map(user => (
+                          <div key={user.id} className="table-row">
+                            <div className="cell-user">{user.userName}</div>
+                            <div className="cell-rfid">{user.rfid}</div>
+                            <div className="cell-actions">
+                           
+                              <button 
+                                className="action-btn remove"
+                                onClick={() => handleRemoveUser(user.id)}
+                              >
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="no-results">
+                          No users found for this room
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
           {/* 
           <div className="pagination">
             <button className="pagination-button active">1</button>

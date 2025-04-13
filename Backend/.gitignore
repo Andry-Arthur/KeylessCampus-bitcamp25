@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .DS_Store
-
+application.propertie
 ### STS ###
 .apt_generated
 .classpath

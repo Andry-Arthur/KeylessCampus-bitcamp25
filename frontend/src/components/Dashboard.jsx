@@ -13,6 +13,7 @@ export default function Dashboard() {
   });
 
   const [schemaData, setSchemaData] = useState([]);
+  const [doorOpen, setDoorOpen] = useState(false);
 
   useEffect(() => {
     async function fetchSchemaData() {
@@ -196,6 +197,21 @@ export default function Dashboard() {
     // In a real app, you would clear authentication state here
     navigate("/login");
   };
+  const toggleDoor = () => {
+    setDoorOpen(true); // Add new log entry for the door open action
+    const newEntry = {
+      id: entryLogs.length + 1,
+      timestamp: new Date().toISOString().replace("T", " ").substring(0, 19),
+      rfid: "ADMIN_OVERRIDE",
+      userName: "Admin User",
+      roomNumber: roomAccessData.roomNumber,
+      status: "success",
+    };
+    setEntryLogs((prev) => [newEntry, ...prev]); // Automatically close the door after 3 seconds
+    setTimeout(() => {
+      setDoorOpen(false);
+    }, 3000);
+  };
 
   // Simulated real-time data updates
   useEffect(() => {
@@ -262,6 +278,12 @@ export default function Dashboard() {
                 onClick={() => setActiveTab("roomAccess")}
               >
                 Room Access
+              </li>
+              <li
+                className={activeTab === "doorControl" ? "active" : ""}
+                onClick={() => setActiveTab("doorControl")}
+              >
+                Door Control
               </li>
               {/*
               <li
@@ -415,6 +437,42 @@ export default function Dashboard() {
                       )}
                     </div>
                   </div>
+                </div>
+              </div>
+            </>
+          )}
+          {activeTab === "doorControl" && (
+            <>
+              <div className="dashboard-header">
+                <h1>Door Control</h1>
+                <div className="user-info">
+                  <span>Admin User</span>
+                  <div className="user-avatar">AU</div>
+                </div>
+              </div>
+
+              <div className="door-control-container">
+                <div className="door-simulation">
+                  <div className="door-frame">
+                    <div className={`door ${doorOpen ? "open" : ""}`}>
+                      <div className="door-handle"></div>
+                    </div>
+                  </div>
+                  <div className="door-status">
+                    Door is {doorOpen ? "Open" : "Closed"}
+                  </div>
+                </div>
+
+                <div className="door-controls">
+                  <button
+                    className={`door-control-btn ${
+                      doorOpen ? "disabled" : "active"
+                    }`}
+                    onClick={toggleDoor}
+                    disabled={doorOpen}
+                  >
+                    {doorOpen ? "Opening..." : "Open Door"}
+                  </button>
                 </div>
               </div>
             </>

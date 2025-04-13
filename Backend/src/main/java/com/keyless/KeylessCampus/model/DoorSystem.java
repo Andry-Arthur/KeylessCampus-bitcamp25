@@ -13,10 +13,37 @@ public class DoorSystem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String SerialId;
-    private String ScanChipId;
-    private String lockChipId;
 
+    public DoorSystem(String name, String serialId) {
+        this.name = name;
+        SerialId = serialId;
+    }
+
+    private String SerialId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSerialId() {
+        return SerialId;
+    }
+
+    public void setSerialId(String serialId) {
+        SerialId = serialId;
+    }
 }
 
 

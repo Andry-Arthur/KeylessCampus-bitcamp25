@@ -13,26 +13,22 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/prabesh")
-    public String prabesh(){
-        return "prabesh";
-    }
 
     //Expected param for now
     @PostMapping("/signup")
     @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
     public ResponseEntity<String> signup(@RequestBody SignupRequest signUpRequest) {
-        System.out.println(signUpRequest.toString() + "-----");
-//         try{
-//             String response= userService.SignUp(signUpRequest.getUsername(), signUpRequest.getPassword(), signUpRequest.getRfid(),signUpRequest.getSerialID());
-//             System.out.println(response);
-//             return ResponseEntity.ok(response);
-//         }catch(Exception ex){
-//            return ResponseEntity.badRequest().body(ex.getMessage());
-//         }
+
+         try{
+             String response= userService.SignUp(signUpRequest.getUsername(), signUpRequest.getPassword(), signUpRequest.getRfid(),signUpRequest.getSerialID());
+             System.out.println(response);
+             return ResponseEntity.ok(response);
+         }catch(Exception ex){
+            return ResponseEntity.badRequest().body(ex.getMessage());
+         }
 
 
-        return ResponseEntity.ok("signup");
+
 
     }
 
@@ -40,13 +36,13 @@ public class AuthController {
     @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-
         try{
             User response = userService.SignIn(loginRequest.getUsername(),loginRequest.getPassword());
             return ResponseEntity.ok(response);
         }catch(Exception ex){
             return ResponseEntity.badRequest().body(ex.getMessage());
         }
+
 
     }
 }

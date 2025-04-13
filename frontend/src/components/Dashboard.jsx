@@ -12,15 +12,34 @@ export default function Dashboard() {
     end: "",
   });
 
+  const [schemaData, setSchemaData] = useState([]);
+
+  useEffect(() => {
+    async function fetchSchemaData() {
+      const response = await fetch("http://localhost:8080/doorschema");
+      const data = await response.json();
+      if (response.status !== 200) {
+        console.log("Failed to fetch schema data");
+        return;
+      }
+      console.log("Schema data:", data);
+      setSchemaData(data);
+    }
+
+    fetchSchemaData();
+  }, []);
+
   const handleRemoveUser = (userId) => {
     // Update the roomAccessData state by filtering out the removed user
-    setRoomAccessData(prevData => ({
+    setRoomAccessData((prevData) => ({
       ...prevData,
-      users: prevData.users.filter(user => user.id !== userId)
+      users: prevData.users.filter((user) => user.id !== userId),
     }));
-    
+
     // In a real app, you would also make an API call to persist this change
-    console.log(`User with ID ${userId} removed from ${roomAccessData.roomNumber}`);
+    console.log(
+      `User with ID ${userId} removed from ${roomAccessData.roomNumber}`
+    );
   };
   // Sample data - in a real app this would come from an API
   useEffect(() => {}, []);
@@ -145,8 +164,8 @@ export default function Dashboard() {
       { id: 1, userName: "John Smith", rfid: "A7F3B209" },
       { id: 4, userName: "Jessica Davis", rfid: "D0F6E532" },
       { id: 16, userName: "Robert Chen", rfid: "J6L2K198" },
-      { id: 17, userName: "Patricia Lee", rfid: "K7M3L209" }
-    ]
+      { id: 17, userName: "Patricia Lee", rfid: "K7M3L209" },
+    ],
   });
 
   // Filter logs based on search term, filter option, and date range
@@ -272,88 +291,88 @@ export default function Dashboard() {
         </div>
 
         <div className="dashboard-content">
-        {activeTab === "history" && (
+          {activeTab === "history" && (
             <>
-          <div className="dashboard-header">
-            <h1>Door History</h1>
-            <div className="user-info">
-              <span>Admin User</span>
-              <div className="user-avatar">AU</div>
-            </div>
-          </div>
-         
-
-          <div className="dashboard-filters">
-            <div className="search-container">
-              <input
-                type="text"
-                placeholder="Search by name, RFID or room..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-
-            <div className="filter-options">
-              <select
-                value={filterOption}
-                onChange={(e) => setFilterOption(e.target.value)}
-                className="select-dropdown"
-              >
-                <option value="all">All Entries</option>
-                <option value="success">Successful</option>
-                <option value="denied">Access Denied</option>
-              </select>
-
-              <input
-                type="date"
-                placeholder="Start Date"
-                value={dateRange.start}
-                onChange={(e) =>
-                  setDateRange({ ...dateRange, start: e.target.value })
-                }
-              />
-
-              <input
-                type="date"
-                placeholder="End Date"
-                value={dateRange.end}
-                onChange={(e) =>
-                  setDateRange({ ...dateRange, end: e.target.value })
-                }
-              />
-            </div>
-          </div>
-
-          <div className="entry-log-table">
-            <div className="table-header">
-              <div className="header-timestamp">Timestamp</div>
-              <div className="header-rfid">RFID</div>
-              <div className="header-user">User Name</div>
-              <div className="header-room">Room</div>
-              <div className="header-status">Status</div>
-            </div>
-
-            <div className="table-body">
-              {filteredLogs.length > 0 ? (
-                filteredLogs.map((log) => (
-                  <div key={log.id} className="table-row">
-                    <div className="cell-timestamp">{log.timestamp}</div>
-                    <div className="cell-rfid">{log.rfid}</div>
-                    <div className="cell-user">{log.userName}</div>
-                    <div className="cell-room">{log.roomNumber}</div>
-                    <div className={`cell-status ${log.status}`}>
-                      {log.status === "success" ? "Granted" : "Denied"}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className="no-results">
-                  No entries found matching your filters
+              <div className="dashboard-header">
+                <h1>Door History</h1>
+                <div className="user-info">
+                  <span>Admin User</span>
+                  <div className="user-avatar">AU</div>
                 </div>
-              )}
-            </div>
-          </div>
-          </>)}
+              </div>
+
+              <div className="dashboard-filters">
+                <div className="search-container">
+                  <input
+                    type="text"
+                    placeholder="Search by name, RFID or room..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+                <div className="filter-options">
+                  <select
+                    value={filterOption}
+                    onChange={(e) => setFilterOption(e.target.value)}
+                    className="select-dropdown"
+                  >
+                    <option value="all">All Entries</option>
+                    <option value="success">Successful</option>
+                    <option value="denied">Access Denied</option>
+                  </select>
+
+                  <input
+                    type="date"
+                    placeholder="Start Date"
+                    value={dateRange.start}
+                    onChange={(e) =>
+                      setDateRange({ ...dateRange, start: e.target.value })
+                    }
+                  />
+
+                  <input
+                    type="date"
+                    placeholder="End Date"
+                    value={dateRange.end}
+                    onChange={(e) =>
+                      setDateRange({ ...dateRange, end: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+
+              <div className="entry-log-table">
+                <div className="table-header">
+                  <div className="header-timestamp">Timestamp</div>
+                  <div className="header-rfid">RFID</div>
+                  <div className="header-user">User Name</div>
+                  <div className="header-room">Room</div>
+                  <div className="header-status">Status</div>
+                </div>
+
+                <div className="table-body">
+                  {filteredLogs.length > 0 ? (
+                    filteredLogs.map((log) => (
+                      <div key={log.id} className="table-row">
+                        <div className="cell-timestamp">{log.timestamp}</div>
+                        <div className="cell-rfid">{log.rfid}</div>
+                        <div className="cell-user">{log.userName}</div>
+                        <div className="cell-room">{log.roomNumber}</div>
+                        <div className={`cell-status ${log.status}`}>
+                          {log.status === "success" ? "Granted" : "Denied"}
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="no-results">
+                      No entries found matching your filters
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
           {activeTab === "roomAccess" && (
             <>
               <div className="dashboard-header">
@@ -374,14 +393,13 @@ export default function Dashboard() {
                       <div className="header-actions">Actions</div>
                     </div>
                     <div className="table-body">
-                      {roomAccessData.users.length > 0 ? (
-                        roomAccessData.users.map(user => (
+                      {schemaData.length > 0 ? (
+                        schemaData.map((user) => (
                           <div key={user.id} className="table-row">
-                            <div className="cell-user">{user.userName}</div>
-                            <div className="cell-rfid">{user.rfid}</div>
+                            <div className="cell-user">{user.username}</div>
+                            <div className="cell-rfid">{user.RFID}</div>
                             <div className="cell-actions">
-                           
-                              <button 
+                              <button
                                 className="action-btn remove"
                                 onClick={() => handleRemoveUser(user.id)}
                               >

@@ -3,7 +3,7 @@ package com.keyless.KeylessCampus.controller;
 public class SignupRequest {
     private String username;
     private String password;
-    private String rfid;
+    private String RFID;
     private String serialID;
 
     public String getUsername() {
@@ -19,7 +19,7 @@ public class SignupRequest {
         return "SignupRequest{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", rfid='" + rfid + '\'' +
+                ", rfid='" + RFID + '\'' +
                 ", serialID='" + serialID + '\'' +
                 '}';
     }
@@ -29,17 +29,17 @@ public class SignupRequest {
     }
 
     public void setRfid(String rfid) {
-        this.rfid = rfid;
+        this.RFID = rfid;
     }
 
     public void setSerialID(String serialID) {
         this.serialID = serialID;
     }
 
-    public SignupRequest(String username, String password, String rfid, String serialID) {
+    public SignupRequest(String username, String password, String RFID, String serialID) {
         this.username = username;
         this.password = password;
-        this.rfid = rfid;
+        this.RFID = RFID;
         this.serialID = serialID;
     }
 
@@ -48,7 +48,7 @@ public class SignupRequest {
     }
 
     public String getRfid() {
-        return rfid;
+        return RFID;
     }
 
     public String getSerialID() {

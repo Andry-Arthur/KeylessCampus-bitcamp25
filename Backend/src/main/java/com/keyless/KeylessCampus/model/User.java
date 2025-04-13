@@ -11,13 +11,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fName;
     private String username;
     private String password;
     private String RFID;
 
-    public User(String fName, String username, String password, String RFID) {
-        this.fName = fName;
+    public User(String username, String password, String RFID) {
         this.username = username;
         this.password = password;
         this.RFID = RFID;
@@ -31,9 +29,6 @@ public class User {
         this.id = id;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
 
     public void setUsername(String username) {
         this.username = username;
@@ -51,9 +46,6 @@ public class User {
         return id;
     }
 
-    public String getfName() {
-        return fName;
-    }
 
     public String getUsername() {
         return username;

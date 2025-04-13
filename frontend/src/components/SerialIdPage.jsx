@@ -76,6 +76,18 @@ export default function SerialIdPage() {
               Continue to SignUp
             </button>
           </form>
+          <div className="login-footer" style={{ color: "#121212" }}>
+            Already have an account?{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/login");
+              }}
+            >
+              Sign In
+            </a>
+          </div>
         </div>
       )}
       {!serialPage && <ScanIdPage />}

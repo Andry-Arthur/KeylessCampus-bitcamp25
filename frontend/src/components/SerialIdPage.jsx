@@ -33,6 +33,21 @@ export default function SerialIdPage() {
       {/* Serial ID container */}
       {serialPage && (
         <div className="login-container">
+          <div className="dashboard-logo">
+            <div
+              style={{
+                width: "140px",
+                height: "140px",
+
+                borderRadius: "50%",
+                backgroundImage: "url('/public/KeylessCampus.png')",
+                backgroundSize: "80%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundColor: "#efdfc2",
+              }}
+            ></div>
+          </div>
           <div className="login-header">
             <h1>Enter Serial ID</h1>
             <p>Please enter your device serial identification number</p>

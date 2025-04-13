@@ -84,6 +84,21 @@ export default function Signup() {
           isAnimating ? "fade-out" : ""
         }`}
       >
+        <div className="dashboard-logo">
+          <div
+            style={{
+              width: "140px",
+              height: "140px",
+
+              borderRadius: "50%",
+              backgroundImage: "url('/public/KeylessCampus.png')",
+              backgroundSize: "80%",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundColor: "#efdfc2",
+            }}
+          ></div>
+        </div>
         <div className="login-header">
           <h1>Signup</h1>
           <p>Please fill in your details to sign up</p>

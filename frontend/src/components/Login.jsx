@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { useLocation } from "react-router";
 import "../Login.css";
 
 export default function Login() {
   let navigate = useNavigate();
+
+  const location = useLocation();
+  const { serialId } = location.state || {};
+  console.log("Serialsjdn ID from location:", serialId);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -55,7 +60,7 @@ export default function Login() {
       // Redirect after animation completes
       setTimeout(() => {
         // Replace with actual redirect
-        navigate("/signup");
+        navigate("/");
         console.log("Redirecting to dashboard...");
         // window.location.href = "/dashboard";
       }, 2500);
@@ -90,8 +95,22 @@ export default function Login() {
       {/* Login container */}
       <div className={`login-container ${isAnimating ? "fade-out" : ""}`}>
         <div className="login-header">
+          <div className="dashboard-logo">
+            <div
+              style={{
+                width: "140px",
+                height: "140px",
+
+                borderRadius: "50%",
+                backgroundImage: "url('/public/KeylessCampus.png')",
+                backgroundSize: "80%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundColor: "#efdfc2",
+              }}
+            ></div>
+          </div>
           <h1>Welcome Back</h1>
-          <p>Please sign in to continue</p>
         </div>
 
         <form onSubmit={handleSubmit}>

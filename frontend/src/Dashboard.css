@@ -1,0 +1,410 @@
+/* Dashboard CSS - matched to your login page style but full width */
+app-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #f5f5f5;
+}
+
+/* Make dashboard page different from login page */
+.dashboard-page {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Background */
+.site-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(135deg, #4a90e2, #2c3e50);
+}
+
+/* Dashboard Container - Full Width */
+.dashboard-container {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 240px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-logo {
+  padding: 0 20px;
+  /* margin-bottom: 40px; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dashboard-logo h2 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.dashboard-logo p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.dashboard-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-nav li {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-nav li.active {
+  background-color: #4a90e2;
+  border-left: 4px solid white;
+}
+
+.dashboard-logout {
+  margin-top: auto;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.2s ease;
+}
+
+.dashboard-logout:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Content Area */
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 10px;
+  color: #666;
+  font-size: 16px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Filters */
+.dashboard-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-options select,
+.filter-options input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+.select-dropdown {
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.select-dropdown:focus,
+.search-container input:focus,
+.filter-options input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Entry Log Table */
+.entry-log-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-header {
+  display: flex;
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #eee;
+}
+
+.table-header > div {
+  padding: 15px;
+}
+
+.table-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.table-row {
+  color: black;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+.table-row:hover {
+  background-color: #f5f9ff;
+}
+
+.table-row > div {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Column widths */
+.header-timestamp,
+.cell-timestamp {
+  width: 22%;
+}
+
+.header-rfid,
+.cell-rfid {
+  width: 15%;
+}
+
+.header-user,
+.cell-user {
+  width: 25%;
+}
+
+.header-room,
+.cell-room {
+  width: 20%;
+}
+
+.header-status,
+.cell-status {
+  width: 18%;
+}
+
+/* Status styling */
+.cell-status {
+  font-weight: 500;
+}
+
+.cell-status.success {
+  color: #2ecc71;
+}
+
+.cell-status.denied {
+  color: #e74c3c;
+}
+
+.no-results {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover {
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.pagination-button.active {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .dashboard-sidebar {
+    width: 200px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .dashboard-nav ul {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+
+  .dashboard-nav li {
+    white-space: nowrap;
+    padding: 10px 15px;
+  }
+
+  .dashboard-logo {
+    margin-bottom: 10px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .filter-options {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .dashboard-filters {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .table-header,
+  .table-row {
+    font-size: 13px;
+  }
+
+  .header-timestamp,
+  .cell-timestamp,
+  .header-rfid,
+  .cell-rfid,
+  .header-user,
+  .cell-user,
+  .header-room,
+  .cell-room,
+  .header-status,
+  .cell-status {
+    padding: 12px 8px;
+  }
+}

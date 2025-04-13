@@ -10,8 +10,8 @@ import java.util.UUID;
 @Entity
 public class DoorSystem {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String SerialId;
     private String ScanChipId;

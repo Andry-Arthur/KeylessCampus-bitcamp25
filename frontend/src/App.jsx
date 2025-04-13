@@ -17,9 +17,11 @@ function App() {
           {/* <Route path="/dashboard" element={<NewHelp />} /> */}
         </Route>
 
-        <Route path="/signup" element={<SerialIdPage />} />
+        {/* <Route path="/signup" element={} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="/scanId" element={<ScanIdPage />} />
+        <Route path="/signup" element={<SerialIdPage />} />
+        <Route path="/signupNext" element={<ScanIdPage />} />
+        <Route path="/signupFinal" element={<Signup />} />
       </Routes>
     </BrowserRouter>
   );

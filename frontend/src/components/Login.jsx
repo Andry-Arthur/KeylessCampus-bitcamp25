@@ -6,10 +6,6 @@ import "../Login.css";
 export default function Login() {
   let navigate = useNavigate();
 
-  const location = useLocation();
-  const { serialId } = location.state || {};
-  console.log("Serialsjdn ID from location:", serialId);
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [roomNumber, setRoomNumber] = useState("");
@@ -34,35 +30,36 @@ export default function Login() {
     "Room 303",
   ];
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const newErrors = {
+      username: username.trim() === "",
+      password: password.length < 6,
+    };
+    setErrors(newErrors);
+    if (newErrors.username || newErrors.password) {
+      console.log(newErrors.password + "Password error");
+
+      return;
+    }
+
     const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // You're sending JSON
       },
-      body: JSON.stringify({ username: "Prabesh Bista", password: "solti" }),
+      body: JSON.stringify({ username: username, password: password }),
     });
 
-    console.log(response.body);
-    // if (!response.ok) {
-    //   throw new Error(`HTTP error! status: ${response.status}`);
-    // }
-
-  // const responseData = await response.json();
-  // console.log(responseData);
+    if (response.status !== 200) {
+      console.log("Login failed");
+      return;
+    }
+    localStorage.setItem("username", username);
     handleSuccessfulLogin();
 
-    // const newErrors = {
-    //   username: username.trim() === "",
-    //   password: password.length < 6,
-    // };
-
-    // setErrors(newErrors);
-
-    // if (!newErrors.username && !newErrors.password) {
-    //   handleSuccessfulLogin();
-    // }
+    // const responseData = await response.json();
+    // console.log(responseData + "Data from server");
   };
 
   const handleSuccessfulLogin = () => {

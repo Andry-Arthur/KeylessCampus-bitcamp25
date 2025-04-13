@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import "../Login.css";
-import Signup from "./Signup";
+import Login from "./Login";
+import ScanIdPage from "./ScanIdPage";
 
 export default function SerialIdPage() {
   const [serialPage, setSerialPage] = useState(true);
@@ -20,9 +21,9 @@ export default function SerialIdPage() {
     }
 
     // If valid, navigate directly to signup page
-    navigate("/signup", { state: { serialId: serialId } });
-    setSerialPage(false);
-    console.log("Redirecting to signup page with serialId:", serialId);
+    navigate("/signupNext", { state: { serialId: serialId } });
+    // setSerialPage(false);
+    // console.log("Redirecting to login page with serialId:", serialId);
   };
 
   return (
@@ -72,12 +73,12 @@ export default function SerialIdPage() {
             </div>
 
             <button type="submit" className="login-button">
-              Continue to Signup
+              Continue to SignUp
             </button>
           </form>
         </div>
       )}
-      {!serialPage && <Signup />}
+      {!serialPage && <ScanIdPage />}
     </div>
   );
 }

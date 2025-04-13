@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import "../Login.css";
 
 export default function Signup() {
   let navigate = useNavigate();
+  const location = useLocation();
+  const { serialId, RFID } = location.state || {};
+  console.log("Serialsjdn ID from location:", serialId);
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -16,16 +19,27 @@ export default function Signup() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const response = await fetch("http://localhost:8080/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // You're sending JSON
       },
-      body: JSON.stringify({ username: "Prabesh Bista", password: "solti", rfid: "123", serialID : "421" }),
+      body: JSON.stringify({
+        username: userName,
+        password: password,
+        RFID: RFID,
+        serialID: serialId,
+      }),
     });
     console.log(response.body);
+    if (response.status !== 200) {
+      console.log("Signup failed");
+      return;
+    }
+
     handleSuccessfulSignup();
 
     // Uncomment for validation
@@ -54,8 +68,8 @@ export default function Signup() {
       // Redirect after animation completes
       setTimeout(() => {
         // Replace with actual redirect
-        navigate("/login");
-        console.log("Redirecting to login page...");
+        navigate("/");
+        console.log("Redirecting to dashboard page...");
         // window.location.href = "/login";
       }, 2500);
     }, 200);

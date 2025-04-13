@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "blink_led",
-    "project_version":    "2158bb0-dirty",
+    "project_version":    "1b7147e-dirty",
     "project_path":       "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock",
     "idf_path":           "/home/bjalki/esp/esp-idf",
     "build_dir":          "/home/bjalki/files/KeylessCampus-bitcamp25/hardware/lock/build",

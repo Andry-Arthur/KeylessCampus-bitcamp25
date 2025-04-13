@@ -241,9 +241,12 @@ esp_err_t connect_tcp_server(void)
 
 
 		gpio_set_level(2, 1);
-		vTaskDelay(10000/portTICK_PERIOD_MS);
+		vTaskDelay(3000/portTICK_PERIOD_MS);
 		gpio_set_level(2, 0);
     	ESP_LOGI(TAG, "WE DID IT!");
+ char *ack = "Opened Succesfully";
+            write(sock, ack, strlen(ack));
+
     }
 	}
 

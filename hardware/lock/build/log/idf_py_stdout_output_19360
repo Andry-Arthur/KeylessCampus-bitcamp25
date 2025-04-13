@@ -1,0 +1,586 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (30) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 13 2025 03:59:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19b40h (105280) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=00029b68 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00029b8c vaddr=3ffb0000 size=03ef0h ( 16112) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=0002da84 vaddr=40080000 size=02594h (  9620) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=85d10h (548112) map[0m
+[0;32mI (331) esp_image: segment 5: paddr=000b5d38 vaddr=40082594 size=15204h ( 86532) load[0m
+[0;32mI (376) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Multicore app[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     blink_led[0m
+[0;32mI (400) app_init: App version:      1b7147e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Apr 13 2025 06:13:08[0m
+[0;32mI (409) app_init: ELF file SHA256:  b43c51676...[0m
+[0;32mI (414) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (417) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (421) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (425) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (429) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (436) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (440) heap_init: At 3FFB81B0 len 00027E50 (159 KiB): DRAM[0m
+[0;32mI (446) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (451) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 40097798 len 00008868 (34 KiB): IRAM[0m
+[0;32mI (463) spi_flash: detected chip: generic[0m
+[0;32mI (466) spi_flash: flash io: dio[0m
+[0;33mW (468) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (482) main_task: Started on CPU0[0m
+[0;32mI (492) main_task: Calling app_main()[0m
+[0;32mI (522) wifi:wifi driver task: 3ffc0188, prio:23, stack:6656, core=0[0m
+[0;32mI (532) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (532) wifi:wifi certification version: v7.0[0m
+[0;32mI (532) wifi:config NVS flash: enabled[0m
+[0;32mI (532) wifi:config nano formatting: disabled[0m
+[0;32mI (542) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (542) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (542) wifi:Init management short buffer num: 32[0m
+[0;32mI (552) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (552) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (562) wifi:Init static rx buffer num: 10[0m
+[0;32mI (562) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (572) wifi_init: rx ba win: 6[0m
+[0;32mI (572) wifi_init: accept mbox: 6[0m
+[0;32mI (572) wifi_init: tcpip mbox: 32[0m
+[0;32mI (572) wifi_init: udp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp tx win: 5760[0m
+[0;32mI (582) wifi_init: tcp rx win: 5760[0m
+[0;32mI (592) wifi_init: tcp mss: 1440[0m
+[0;32mI (592) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (592) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (602) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (682) wifi:mode : sta (bc:dd:c2:cd:aa:44)[0m
+[0;32mI (692) wifi:enable tsf[0m
+[0;32mI (692) WIFI: Oh yeah, we cooking with fire[0m
+
+[0;32mI (692) WIFI: Connecting to wireless access point...[0m
+
+[0;32mI (712) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (712) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (732) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (742) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (10742) wifi:state: run -> init (0xcc00)[0m
+[0;32mI (10752) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (10752) WIFI: Attempting to recconect to Access Point[0m
+
+[0;32mI (13162) WIFI: Attempting to recconect to Access Point[0m
+
+[0;32mI (13182) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13182) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (13192) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (13202) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (13332) wifi:connected with ItWouldBeRealCoolIfThisWorks, aid = 1, channel 6, BW20, bssid = 32:7b:d9:e3:2b:6b[0m
+[0;32mI (13332) wifi:security: WPA2-PSK, phy: bgn, rssi: -40[0m
+[0;32mI (13342) wifi:pm start, type: 1[0m
+
+[0;32mI (13342) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (13422) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (14532) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (14532) WIFI: STA IP: 172.20.10.6[0m
+[0;32mI (14532) WIFI: Connected to ap[0m
+[0;32mI (14572) wifi:<ba-add>idx:0 (ifx:0, 32:7b:d9:e3:2b:6b), tid:0, ssn:2, winSize:64[0m
+[0;32mI (14962) WIFI: Connected to TCP server.[0m
+[1;31mE (25822) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (25822) WIFI: so close to glory[0m
+[1;31mE (27972) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (27972) WIFI: so close to glory[0m
+[0;32mI (30122) WIFI: Connected to TCP server.[0m
+ON
+[0;32mI (31652) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (34652) WIFI: WE DID IT![0m
+[1;31mE (279562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (279562) WIFI: so close to glory[0m
+[1;31mE (281722) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (281722) WIFI: so close to glory[0m
+[1;31mE (283902) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (283902) WIFI: so close to glory[0m
+[1;31mE (286052) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (286052) WIFI: so close to glory[0m
+[1;31mE (288172) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (288172) WIFI: so close to glory[0m
+[1;31mE (290322) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (290322) WIFI: so close to glory[0m
+[1;31mE (292372) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (292382) WIFI: so close to glory[0m
+[1;31mE (294522) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (294522) WIFI: so close to glory[0m
+[1;31mE (296672) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (296672) WIFI: so close to glory[0m
+[1;31mE (298822) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (298822) WIFI: so close to glory[0m
+[0;32mI (300972) WIFI: Connected to TCP server.[0m
+ON
+[0;32mI (308242) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (311242) WIFI: WE DID IT![0m
+ON
+[0;32mI (331282) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (334282) WIFI: WE DID IT![0m
+ON
+[0;32mI (364562) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (367562) WIFI: WE DID IT![0m
+[1;31mE (417702) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (417712) WIFI: so close to glory[0m
+[1;31mE (419762) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (419762) WIFI: so close to glory[0m
+[1;31mE (421902) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (421902) WIFI: so close to glory[0m
+[1;31mE (424082) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (424082) WIFI: so close to glory[0m
+[1;31mE (426202) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (426202) WIFI: so close to glory[0m
+[1;31mE (428352) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (428352) WIFI: so close to glory[0m
+[1;31mE (430512) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (430512) WIFI: so close to glory[0m
+[1;31mE (432672) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (432672) WIFI: so close to glory[0m
+[1;31mE (434812) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (434822) WIFI: so close to glory[0m
+[1;31mE (436972) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (436972) WIFI: so close to glory[0m
+[1;31mE (439112) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (439112) WIFI: so close to glory[0m
+[1;31mE (441262) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (441262) WIFI: so close to glory[0m
+[1;31mE (443412) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (443412) WIFI: so close to glory[0m
+[1;31mE (445562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (445562) WIFI: so close to glory[0m
+[1;31mE (447712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (447712) WIFI: so close to glory[0m
+[1;31mE (449872) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (449872) WIFI: so close to glory[0m
+[1;31mE (452012) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (452012) WIFI: so close to glory[0m
+[1;31mE (454172) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (454172) WIFI: so close to glory[0m
+[1;31mE (456312) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (456312) WIFI: so close to glory[0m
+[1;31mE (458462) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (458462) WIFI: so close to glory[0m
+[1;31mE (460612) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (460622) WIFI: so close to glory[0m
+[1;31mE (462792) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (462792) WIFI: so close to glory[0m
+[1;31mE (464912) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (464922) WIFI: so close to glory[0m
+[1;31mE (467072) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (467072) WIFI: so close to glory[0m
+[1;31mE (469212) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (469212) WIFI: so close to glory[0m
+[1;31mE (471432) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (471432) WIFI: so close to glory[0m
+[1;31mE (473722) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (473722) WIFI: so close to glory[0m
+[1;31mE (475882) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (475882) WIFI: so close to glory[0m
+[1;31mE (478122) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (478122) WIFI: so close to glory[0m
+[1;31mE (480292) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (480292) WIFI: so close to glory[0m
+[1;31mE (482532) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (482532) WIFI: so close to glory[0m
+[1;31mE (484672) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (484672) WIFI: so close to glory[0m
+[1;31mE (486822) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (486832) WIFI: so close to glory[0m
+[1;31mE (488982) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (488982) WIFI: so close to glory[0m
+[1;31mE (491132) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (491132) WIFI: so close to glory[0m
+[1;31mE (493272) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (493282) WIFI: so close to glory[0m
+[1;31mE (495432) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (495432) WIFI: so close to glory[0m
+[1;31mE (497582) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (497582) WIFI: so close to glory[0m
+[1;31mE (499732) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (499732) WIFI: so close to glory[0m
+[1;31mE (501882) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (501882) WIFI: so close to glory[0m
+[1;31mE (504232) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (504232) WIFI: so close to glory[0m
+[1;31mE (506382) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (506382) WIFI: so close to glory[0m
+[1;31mE (508552) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (508552) WIFI: so close to glory[0m
+[1;31mE (510682) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (510692) WIFI: so close to glory[0m
+[1;31mE (512782) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (512782) WIFI: so close to glory[0m
+[1;31mE (514822) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (514832) WIFI: so close to glory[0m
+[1;31mE (517042) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (517042) WIFI: so close to glory[0m
+[1;31mE (519202) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (519202) WIFI: so close to glory[0m
+[1;31mE (521352) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (521352) WIFI: so close to glory[0m
+[1;31mE (523492) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (523492) WIFI: so close to glory[0m
+[1;31mE (525632) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (525642) WIFI: so close to glory[0m
+[1;31mE (527782) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (527792) WIFI: so close to glory[0m
+[1;31mE (529942) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (529942) WIFI: so close to glory[0m
+[1;31mE (532012) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (532012) WIFI: so close to glory[0m
+[1;31mE (534152) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (534152) WIFI: so close to glory[0m
+[1;31mE (536292) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (536292) WIFI: so close to glory[0m
+[1;31mE (538442) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (538442) WIFI: so close to glory[0m
+[1;31mE (540602) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (540602) WIFI: so close to glory[0m
+[1;31mE (542732) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (542742) WIFI: so close to glory[0m
+[1;31mE (544892) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (544892) WIFI: so close to glory[0m
+[1;31mE (547042) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (547042) WIFI: so close to glory[0m
+[1;31mE (549112) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (549112) WIFI: so close to glory[0m
+[1;31mE (551242) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (551242) WIFI: so close to glory[0m
+[1;31mE (553392) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (553392) WIFI: so close to glory[0m
+[1;31mE (555702) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (555712) WIFI: so close to glory[0m
+[1;31mE (557772) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (557772) WIFI: so close to glory[0m
+[1;31mE (559952) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (559952) WIFI: so close to glory[0m
+[1;31mE (562102) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (562112) WIFI: so close to glory[0m
+[1;31mE (564452) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (564452) WIFI: so close to glory[0m
+[1;31mE (566712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (566712) WIFI: so close to glory[0m
+[1;31mE (568852) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (568852) WIFI: so close to glory[0m
+[1;31mE (571002) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (571002) WIFI: so close to glory[0m
+[1;31mE (573152) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (573152) WIFI: so close to glory[0m
+[1;31mE (575312) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (575312) WIFI: so close to glory[0m
+[1;31mE (577402) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (577402) WIFI: so close to glory[0m
+[1;31mE (579452) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (579452) WIFI: so close to glory[0m
+[1;31mE (581572) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (581572) WIFI: so close to glory[0m
+[1;31mE (583712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (583712) WIFI: so close to glory[0m
+[1;31mE (585892) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (585892) WIFI: so close to glory[0m
+[1;31mE (588002) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (588002) WIFI: so close to glory[0m
+[1;31mE (590152) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (590152) WIFI: so close to glory[0m
+[1;31mE (592302) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (592302) WIFI: so close to glory[0m
+[1;31mE (594482) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (594482) WIFI: so close to glory[0m
+[1;31mE (596642) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (596642) WIFI: so close to glory[0m
+[0;32mI (598772) WIFI: Connected to TCP server.[0m
+ON
+[0;32mI (638072) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (641072) WIFI: WE DID IT![0m
+[1;31mE (673102) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (673102) WIFI: so close to glory[0m
+[1;31mE (675252) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (675252) WIFI: so close to glory[0m
+[1;31mE (677402) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (677402) WIFI: so close to glory[0m
+[1;31mE (679542) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (679542) WIFI: so close to glory[0m
+[1;31mE (681692) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (681692) WIFI: so close to glory[0m
+[1;31mE (683852) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (683862) WIFI: so close to glory[0m
+[1;31mE (686002) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (686002) WIFI: so close to glory[0m
+[1;31mE (688152) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (688152) WIFI: so close to glory[0m
+[1;31mE (690302) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (690302) WIFI: so close to glory[0m
+[1;31mE (692452) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (692452) WIFI: so close to glory[0m
+[1;31mE (694602) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (694602) WIFI: so close to glory[0m
+[1;31mE (696752) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (696752) WIFI: so close to glory[0m
+[1;31mE (698802) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (698802) WIFI: so close to glory[0m
+[1;31mE (701052) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (701052) WIFI: so close to glory[0m
+[1;31mE (703202) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (703202) WIFI: so close to glory[0m
+[1;31mE (705352) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (705352) WIFI: so close to glory[0m
+[1;31mE (707542) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (707542) WIFI: so close to glory[0m
+[1;31mE (709652) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (709652) WIFI: so close to glory[0m
+[1;31mE (711812) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (711812) WIFI: so close to glory[0m
+[1;31mE (713952) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (713952) WIFI: so close to glory[0m
+[1;31mE (716102) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (716102) WIFI: so close to glory[0m
+[1;31mE (718262) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (718262) WIFI: so close to glory[0m
+[1;31mE (720432) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (720432) WIFI: so close to glory[0m
+[1;31mE (722702) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (722702) WIFI: so close to glory[0m
+[1;31mE (724912) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (724912) WIFI: so close to glory[0m
+[1;31mE (727082) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (727082) WIFI: so close to glory[0m
+[1;31mE (729182) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (729182) WIFI: so close to glory[0m
+[1;31mE (731362) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (731362) WIFI: so close to glory[0m
+[1;31mE (733512) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (733512) WIFI: so close to glory[0m
+[1;31mE (735662) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (735662) WIFI: so close to glory[0m
+[1;31mE (737852) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (737852) WIFI: so close to glory[0m
+[1;31mE (739962) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (739962) WIFI: so close to glory[0m
+[1;31mE (742112) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (742112) WIFI: so close to glory[0m
+[1;31mE (744272) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (744272) WIFI: so close to glory[0m
+[1;31mE (746412) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (746412) WIFI: so close to glory[0m
+[1;31mE (748562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (748562) WIFI: so close to glory[0m
+[1;31mE (750712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (750712) WIFI: so close to glory[0m
+[1;31mE (752872) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (752872) WIFI: so close to glory[0m
+[1;31mE (755012) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (755012) WIFI: so close to glory[0m
+[1;31mE (757182) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (757182) WIFI: so close to glory[0m
+[1;31mE (759352) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (759352) WIFI: so close to glory[0m
+[1;31mE (761472) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (761472) WIFI: so close to glory[0m
+[1;31mE (763622) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (763622) WIFI: so close to glory[0m
+[1;31mE (765762) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (765762) WIFI: so close to glory[0m
+[1;31mE (768222) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (768232) WIFI: so close to glory[0m
+[1;31mE (770382) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (770382) WIFI: so close to glory[0m
+[1;31mE (772522) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (772522) WIFI: so close to glory[0m
+[1;31mE (774672) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (774672) WIFI: so close to glory[0m
+[1;31mE (776832) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (776832) WIFI: so close to glory[0m
+[1;31mE (778972) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (778982) WIFI: so close to glory[0m
+[1;31mE (781132) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (781142) WIFI: so close to glory[0m
+[1;31mE (783282) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (783282) WIFI: so close to glory[0m
+[1;31mE (785432) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (785432) WIFI: so close to glory[0m
+[1;31mE (787482) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (787482) WIFI: so close to glory[0m
+[1;31mE (789662) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (789662) WIFI: so close to glory[0m
+[1;31mE (791782) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (791792) WIFI: so close to glory[0m
+[1;31mE (793982) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (793992) WIFI: so close to glory[0m
+[1;31mE (796082) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (796082) WIFI: so close to glory[0m
+[1;31mE (798242) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (798242) WIFI: so close to glory[0m
+[1;31mE (800392) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (800392) WIFI: so close to glory[0m
+[1;31mE (802532) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (802532) WIFI: so close to glory[0m
+[1;31mE (804682) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (804682) WIFI: so close to glory[0m
+[1;31mE (806832) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (806832) WIFI: so close to glory[0m
+[1;31mE (808982) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (808982) WIFI: so close to glory[0m
+[1;31mE (811162) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (811162) WIFI: so close to glory[0m
+[1;31mE (813282) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (813282) WIFI: so close to glory[0m
+[1;31mE (815442) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (815442) WIFI: so close to glory[0m
+[1;31mE (817582) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (817582) WIFI: so close to glory[0m
+[1;31mE (819742) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (819742) WIFI: so close to glory[0m
+[1;31mE (821992) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (821992) WIFI: so close to glory[0m
+[1;31mE (824132) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (824142) WIFI: so close to glory[0m
+[1;31mE (826292) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (826292) WIFI: so close to glory[0m
+[1;31mE (828432) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (828442) WIFI: so close to glory[0m
+[1;31mE (830582) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (830592) WIFI: so close to glory[0m
+[1;31mE (832742) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (832752) WIFI: so close to glory[0m
+[1;31mE (834902) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (834902) WIFI: so close to glory[0m
+[1;31mE (837072) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (837072) WIFI: so close to glory[0m
+[1;31mE (839192) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (839192) WIFI: so close to glory[0m
+[1;31mE (841342) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (841342) WIFI: so close to glory[0m
+[1;31mE (843502) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (843502) WIFI: so close to glory[0m
+[1;31mE (845662) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (845662) WIFI: so close to glory[0m
+[1;31mE (847792) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (847792) WIFI: so close to glory[0m
+[1;31mE (849872) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (849872) WIFI: so close to glory[0m
+[1;31mE (852042) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (852042) WIFI: so close to glory[0m
+[1;31mE (854142) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (854142) WIFI: so close to glory[0m
+[1;31mE (856292) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (856292) WIFI: so close to glory[0m
+[1;31mE (858442) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (858442) WIFI: so close to glory[0m
+[1;31mE (860632) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (860632) WIFI: so close to glory[0m
+[1;31mE (862752) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (862752) WIFI: so close to glory[0m
+[1;31mE (864992) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (864992) WIFI: so close to glory[0m
+[1;31mE (867042) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (867042) WIFI: so close to glory[0m
+[1;31mE (869192) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (869192) WIFI: so close to glory[0m
+[1;31mE (871352) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (871352) WIFI: so close to glory[0m
+[1;31mE (873502) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (873502) WIFI: so close to glory[0m
+[1;31mE (875642) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (875642) WIFI: so close to glory[0m
+[1;31mE (877802) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (877802) WIFI: so close to glory[0m
+[1;31mE (879962) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (879962) WIFI: so close to glory[0m
+[1;31mE (882092) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (882092) WIFI: so close to glory[0m
+[1;31mE (884242) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (884242) WIFI: so close to glory[0m
+[1;31mE (886402) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (886402) WIFI: so close to glory[0m
+[1;31mE (888592) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (888592) WIFI: so close to glory[0m
+[1;31mE (890692) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (890702) WIFI: so close to glory[0m
+[1;31mE (892842) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (892852) WIFI: so close to glory[0m
+[1;31mE (895002) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (895002) WIFI: so close to glory[0m
+[1;31mE (897152) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (897152) WIFI: so close to glory[0m
+[1;31mE (899312) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (899312) WIFI: so close to glory[0m
+[1;31mE (901452) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (901452) WIFI: so close to glory[0m
+[1;31mE (903602) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (903602) WIFI: so close to glory[0m
+[1;31mE (905752) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (905752) WIFI: so close to glory[0m
+[1;31mE (907912) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (907912) WIFI: so close to glory[0m
+[1;31mE (910052) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (910052) WIFI: so close to glory[0m
+[1;31mE (912112) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (912112) WIFI: so close to glory[0m
+[1;31mE (914252) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (914252) WIFI: so close to glory[0m
+[1;31mE (916422) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (916422) WIFI: so close to glory[0m
+[1;31mE (918562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (918562) WIFI: so close to glory[0m
+[1;31mE (920702) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (920702) WIFI: so close to glory[0m
+[1;31mE (922852) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (922852) WIFI: so close to glory[0m
+[1;31mE (925002) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (925002) WIFI: so close to glory[0m
+[1;31mE (927162) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (927172) WIFI: so close to glory[0m
+[1;31mE (929302) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (929312) WIFI: so close to glory[0m
+[1;31mE (931562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (931562) WIFI: so close to glory[0m
+[1;31mE (933712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (933712) WIFI: so close to glory[0m
+[1;31mE (935872) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (935872) WIFI: so close to glory[0m
+[1;31mE (938022) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (938022) WIFI: so close to glory[0m
+[1;31mE (940162) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (940162) WIFI: so close to glory[0m
+[1;31mE (942412) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (942412) WIFI: so close to glory[0m
+[1;31mE (944562) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (944562) WIFI: so close to glory[0m
+[1;31mE (946712) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (946712) WIFI: so close to glory[0m
+[1;31mE (948882) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (948882) WIFI: so close to glory[0m
+[1;31mE (951012) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (951022) WIFI: so close to glory[0m
+[1;31mE (953162) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (953162) WIFI: so close to glory[0m
+[1;31mE (955312) WIFI: Failed to connect to 157.245.244.233![0m
+[0;32mI (955312) WIFI: so close to glory[0m
+�p��p��� ��p�|�| p������p�|�|ppp��|� p|p p p�||p�pppp��p��p�p��|�|���p��pp���pp�|��|ppp|�|����|p p p�||p�pppp��p��p�p��|�|���p��p||�| p��|p�|� ���p|���pp��p��� �|����|p p p�|�|ppppp��p��p�pp||��p�� �� p��� �|�p���|�|�p��p�p�������p|���|�pp�p�p|p p p�|�|ppppp��p��p�pp||��p��� ��p��p�p|���|�p�������p|���|�pp�p|p p p�|�|ppppp��p��p�pp||��p|� |����|�|��p�|�|p�p�������p|���|�pp�p�p|p p p�|�|ppppp��p��p�pp||��p���|�|�p��p�p�������p|���|�pp�p�p|p p p�|�|ppppp��p��p�pp||��p��� ��p��p�p�������p��p���pp�p| pp|p p p�|�|ppppp��p��p�pp||��p��� ��p��p�p�������p|���|�pp�pp|p p p�|�|ppppp��p��p�pp||��p���|�|�p��p�p�������p|���|�pp�p�p|p p p�|�|ppppp��p��p��|�||���pp�p�� p��p|ppp|� p p p�|�|ppppp��p��p��|�||���pp ������p|��| �pp|� p p p�|�|ppppp��p��p��|�||���pp����pp|��| �pp�p�p|p p p�|�|ppppp��p��p��|�||���pp��p|��| �pp|� p p p�| p�pppp��p��p��|�||���pp���p|��| �pp|� p p p�| p�pppp��p��p��|�||���pp���p�p��p|ppp�p|�| p|p p p�| p�pppp��p��p��|�||���pp���p�p��p|ppp�p|�| p|p p p�|p�pppp��p��p��|�||���pp���p|�����pp�p|�| p|p p p�|p�pppp��p��p��|�||���pp��p��pppp� �|pp � p|�|����|p p p�|p�pppp��p��p��|�||���pp��p��ppp� ppp� �|pp � p|�|����|p p p�| p�pppp|��|�||���pp|���������p�|�| p| p| p�|p�||����p����pp| p�pp�p�pp|pp|�|ppp|� p p p�| p�pppp��p��p�p|�|���p�pp��� pp���p���p��p�p���p � �p|�|� p p p�| p�pppp��p��p�p|�|��p�����|p p p�|p�pppp��p��p�ppp | p��� |� p��p��|�||||�|��p��p�| p��p���|p � p p p�|p�pppp��p��p�pp �|�|�|������p|��p��| p��p��|������p ���������p�||�|����� p � p p p�|p�pppp��p��p�p|�����pp|� pp p|�|���pp�p pp p �pp�p�p�ppp�p�pp p��� �pp|� pp p��|���p�p p�|����||��|����ppp|p p p�|p�pppp��p��p�p��� ���ppp||��p|ppp ���| p p�ppp|p p p�|pp�pppp��p��p�p��� ���pp ���| p|ppp �����||p pppp|p p p�||p�pppp��p��p�p��� ���pp �����||p|ppp���| p p��pppp|p p p p�p�pppp��p��p�p��|�|�|�������p��p�| pp����|��|�� �p�� ||�|�|�|p���|||���|p���� p �p�p�pp�p p�||�|��| p|� p ���pp p������p�p�pp�p�p�p|p�p���p�p��p�p�p��p|p�|p p p p�p�pppp��p��p�p��������p����pp���p|p�|�|p� p|�pp���|� p������p�pp|p| p|p p p p|ppppp��p��p�p�|p��� �� p�����pp�p|p � p p p p|ppppp��p��p�p��pp�p p��p�pp�pp�p| pp p||ppp�p p���� |��p|||��| pp|������ | p���|�| p�pp|ppppp���p��| p�pp|ppppp����|p p p p�p�pppp��p��p�p ��p|p��� ���|�| pp|������ | p�pp�pp�p| ppp��� p���p�|p���p�|��p�pp�p|p p pp�p�p�pppp�����|����p��� ||��|������pp��� pp�pp�p|ppppppp�|� p|� �����pp�p�p�ppp�p�ppp�p�ppp| p p����pp�p|pppppppp|p p pp�p�p�pppp��p��p�ppp�� pp�ppp�p|ppppppp�|� p p pp�p�p�pppp��p��p�pp �|�|�|�������p��| p �|p p pp�p|ppppp��p��p�pp�� �|p ��pp��ppp|���pp p�p�p�p|p�p���p�p��p�p�p��p|p�pp p��p��pp p���|pp�p p��p||�|p��p|�|� p ��pppp�p�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p pppp�p�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��p�|pp�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p p�|pp�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��p�||p�p�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p p�||p�p�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��p p|p�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p p p|p�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��ppp|�|ppppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p ppp|�|ppppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��pp�p| p�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p pp�p| p�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��pp|p�p�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p pp|p�p�pppp��p��p�pp��| p�|�||�p��| p�|�|p���|p ��pp| pp�pppp��p��p�pp�� �p|���p��| p��|�|�|�����p��| p�p�p|�pp|�|�pp|�|�pp�p�p p|p p pp| pp�pppp��p��p�pp��| p�|�||�p��| p�

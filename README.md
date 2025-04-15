@@ -1,6 +1,6 @@
 # KeylessCampus
 
-![KeylessCampus Logo](./Keyless%20Campus%20Copy.png)
+![KeylessCampus Logo](./KeylessCampus.png)
 
 🔒 [Watch Demo Video](https://youtu.be/2A8vxpOp-nk?si=vpI7ShX62BQcpEkt)
 

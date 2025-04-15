@@ -12,6 +12,11 @@ public class TCPStarter {
 
     private static final AtomicBoolean isListenerStarted = new AtomicBoolean(false);
     private ServerSocket serverSocket;
+    private final DualPortTCP dualPortTCP;
+
+    public TCPStarter(DualPortTCP dualPortTCP) {
+        this.dualPortTCP = dualPortTCP;
+    }
 
     @PostConstruct
     public void startDualPortTCP() {
@@ -20,7 +25,7 @@ public class TCPStarter {
                 serverSocket = new ServerSocket(DualPortTCP.PORT2);
 
                 // Start the listener for PORT 4321
-                new Thread(() -> DualPortTCP.startListenerForMessages(serverSocket)).start();
+                new Thread(() -> dualPortTCP.startListenerForMessages(serverSocket)).start();
 
                 // Start the persistent connection for PORT 1234
                 new Thread(() -> DualPortTCP.startPersistentConnection(DualPortTCP.PORT1)).start();

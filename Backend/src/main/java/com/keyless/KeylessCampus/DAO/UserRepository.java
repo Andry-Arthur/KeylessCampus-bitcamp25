@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.rmi.server.UID;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, UID> {
+public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
     User findByRFID(String RFID);
 }

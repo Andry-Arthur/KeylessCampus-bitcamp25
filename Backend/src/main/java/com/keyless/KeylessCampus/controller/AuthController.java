@@ -1,5 +1,7 @@
 package com.keyless.KeylessCampus.controller;
 
+import com.keyless.KeylessCampus.DAO.ScanTableRepository;
+import com.keyless.KeylessCampus.model.ScanTable;
 import com.keyless.KeylessCampus.model.User;
 import com.keyless.KeylessCampus.service.UserService;
 import org.hibernate.mapping.Any;
@@ -7,11 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class AuthController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ScanTableRepository scanTableRepository;
 
 
     //Expected param for now
@@ -45,4 +52,13 @@ public class AuthController {
 
 
     }
+
+    @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+    @GetMapping("/logs")
+    public ResponseEntity<?> getLogs(){
+        Iterable<ScanTable> scanTableList = scanTableRepository.findAll();
+        List<ScanTable> result = (List<ScanTable>) scanTableList;
+        return ResponseEntity.ok(result);
+    }
+
 }

@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.rmi.server.UID;
 
 @Repository
-public interface DoorRepository extends JpaRepository<DoorSystem, UID> {
+public interface DoorRepository extends JpaRepository<DoorSystem, Long> {
+    DoorSystem findBySerialId(String serialId);
 }
